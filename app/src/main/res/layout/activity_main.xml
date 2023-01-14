@@ -12,7 +12,8 @@
         android:id="@+id/edit_distance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/distancia" />
+        android:hint="@string/distancia"
+        android:inputType="number" />
 
     <TextView
         android:layout_width="match_parent"
@@ -25,7 +26,8 @@
         android:id="@+id/edit_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/preco" />
+        android:hint="@string/preco"
+        android:inputType="numberDecimal" />
 
     <TextView
         android:layout_width="match_parent"
@@ -38,7 +40,8 @@
         android:id="@+id/edit_autonomy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/autonomia" />
+        android:hint="@string/autonomia"
+        android:inputType="numberDecimal" />
 
     <TextView
         android:layout_width="match_parent"
