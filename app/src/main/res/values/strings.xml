@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GastoViagem</string>
+    <string name="distancia">Distancia</string>
+    <string name="preco">Preço</string>
+    <string name="autonomia">Autonomia</string>
+    <string name="calcular">Calcular</string>
+</resources>
