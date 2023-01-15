@@ -25,16 +25,33 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+
+    private fun validar(): Boolean {
+        if (binding.editDistance.text.toString() != ""
+            && binding.editPrice.text.toString() != ""
+            && binding.editAutonomy.text.toString() != ""
+            && binding.editAutonomy.text.toString().toFloat() != 0f) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+
     private fun calculate(): Unit {
 
-        var distancia = binding.editDistance.text.toString().toFloat()
-        var preco = binding.editPrice.text.toString().toFloat()
-        var autonomia = binding.editAutonomy.text.toString().toFloat()
+        if (validar()) {
 
-        var valorTotal = (distancia * preco) / autonomia
+            var distancia = binding.editDistance.text.toString().toFloat()
+            var preco = binding.editPrice.text.toString().toFloat()
+            var autonomia = binding.editAutonomy.text.toString().toFloat()
 
-        binding.textTotalValue.text = valorTotal.toString()
+            var valorTotal = (distancia * preco) / autonomia
 
-        //Toast.makeText(applicationContext, valorTotal.toString(), Toast.LENGTH_LONG).show()
+            binding.textTotalValue.text = valorTotal.toString()
+        } else {
+            Toast.makeText(applicationContext, "Preencha todos os campos", Toast.LENGTH_LONG).show()
+        }
+
     }
 }
