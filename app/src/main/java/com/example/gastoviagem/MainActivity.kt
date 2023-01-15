@@ -26,6 +26,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun calculate(): Unit {
-        Toast.makeText(applicationContext, "Fui clicado!", Toast.LENGTH_LONG).show()
+
+        var distancia = binding.editDistance.text.toString().toFloat()
+        var preco = binding.editPrice.text.toString().toFloat()
+        var autonomia = binding.editAutonomy.text.toString().toFloat()
+
+        var valorTotal = (distancia * preco) / autonomia
+
+        binding.textTotalValue.text = valorTotal.toString()
+
+        //Toast.makeText(applicationContext, valorTotal.toString(), Toast.LENGTH_LONG).show()
     }
 }
